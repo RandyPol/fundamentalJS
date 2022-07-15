@@ -33,5 +33,21 @@ function countdown(n) {
     }
 }
 // Only change code above this line
+// console.log(countdown(10));
 
-console.log(countdown(10));
+// Use Recursion to Create a Range of Numbers
+// The function should return an array of integers which begins 
+// with a number represented by the startNum parameter and ends 
+// with a number represented by the endNum parameter. 
+
+function rangeOfNumbers(startNum, endNum) {
+    if (startNum > endNum) {
+        return [];
+    } else {
+        const countArray = rangeOfNumbers(startNum + 1, endNum);
+        countArray.unshift(startNum);
+        return countArray;
+    }
+};
+
+console.log(rangeOfNumbers(1, 5))
