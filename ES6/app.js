@@ -82,3 +82,26 @@ const PI = freezeObj();
 // to use arrow function syntax. Also, make sure nothing is defined using the keyword var.
 
 const magic = () => new Date();
+
+
+// 
+// Section 5: Write Arrow Functions with Parameters
+// 
+// Rewrite the myConcat function which appends contents 
+// of arr2 to arr1 so that the function uses arrow function syntax.
+
+
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+
+// 
+// Section 6: Set Default Parameters for Your Functions
+// 
+// Modify the function increment by adding default parameters so
+//  that it will add 1 to number if value is not specified.
+
+// Only change code below this line
+const increment = (number, value = 1) => number + value;
+// Only change code above this line
