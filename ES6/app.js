@@ -116,4 +116,15 @@ const increment = (number, value = 1) => number + value;
 const sum = (...args) => {
   return args.reduce((a, b) => a + b, 0);
 }
-console.log(sum(1, 2, 3, 4))
+// console.log(sum(1, 2, 3, 4))
+
+// 
+// Section 8: Use the Spread Operator to Evaluate Arrays In-Place
+// 
+// Copy all contents of arr1 into another array arr2 using the spread operator.
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];
+
+console.log(arr2);
