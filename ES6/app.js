@@ -70,7 +70,7 @@ function freezeObj() {
   } catch (ex) {
     console.log(ex);
   }
-  console.log('before')
+  // console.log('before')
   return MATH_CONSTANTS.PI;
 }
 const PI = freezeObj();
@@ -93,7 +93,7 @@ const magic = () => new Date();
 
 const myConcat = (arr1, arr2) => arr1.concat(arr2);
 
-console.log(myConcat([1, 2], [3, 4, 5]));
+// console.log(myConcat([1, 2], [3, 4, 5]));
 
 
 // 
@@ -105,3 +105,15 @@ console.log(myConcat([1, 2], [3, 4, 5]));
 // Only change code below this line
 const increment = (number, value = 1) => number + value;
 // Only change code above this line
+
+
+// 
+// Section 7: Use the Rest Parameter with Function Parameters
+// 
+// Modify the function sum using the rest parameter in such a way that the function sum 
+// is able to take any number of arguments and return their sum.
+
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1, 2, 3, 4))
