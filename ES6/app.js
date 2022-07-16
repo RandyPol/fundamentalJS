@@ -143,7 +143,7 @@ const HIGH_TEMPERATURES = {
 
 // Only change code below this line
 
-const { today, tomorrow } = HIGH_TEMPERATURES;
+// const { today, tomorrow } = HIGH_TEMPERATURES;
 
 // Only change code above this line
 
@@ -156,14 +156,29 @@ const { today, tomorrow } = HIGH_TEMPERATURES;
 // of today and tomorrow from the HIGH_TEMPERATURES object.
 
 
-const HIGH_TEMPERATURES = {
-  yesterday: 75,
-  today: 77,
-  tomorrow: 80
+
+// const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
+
+
+
+
+// 
+// Section 11: Use Destructuring Assignment to Assign Variables from Nested Objects
+// 
+// Replace the two assignments with an equivalent destructuring assignment. 
+// It should still assign the variables lowToday and highToday the values of 
+// today.low and today.high from the LOCAL_FORECAST object.
+
+
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
 };
 
 // Only change code below this line
 
-const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
+const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST;
 
 // Only change code above this line
+console.log(lowToday)
