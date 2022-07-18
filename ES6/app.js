@@ -414,3 +414,15 @@ import { uppercaseString, lowercaseString } from './string_functions.js';
 // everything from the file into an object called stringFunctions.
 
 import * as stringFunctions from "./string_functions.js";
+
+// Section 24: Create an Export Fallback with export default
+// 
+// There is another export syntax you need to know, known as export default. 
+// Usually you will use this syntax if only one value is being exported from a file. 
+// It is also used to create a fallback value for a file or module.
+// The following function should be the fallback value for the module.
+//  Please add the necessary code to do so.
+
+export default function subtract(x, y) {
+  return x - y;
+}
