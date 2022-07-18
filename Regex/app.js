@@ -9,3 +9,26 @@ let myString = "Hello, World!";
 let myRegex = /Hello/;
 let result = myRegex.test(myString);
 // console.log(result)
+
+
+
+
+// Section 2: Match Literal String
+// 
+// 
+// Complete the regex waldoRegex to find "Waldo" in the
+// string waldoIsHiding with a literal match.
+
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/; // Change this line
+let result = waldoRegex.test(waldoIsHiding);
+
+
+// Section 3: Match a Literal String with Different Possibilities
+// 
+// 
+// Complete the regex petRegex to match the pets dog, cat, bird, or fish.
+
+let petString = "James has a pet cat.";
+let petRegex = /change/; // Change this line
+let result = petRegex.test(petString);
