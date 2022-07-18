@@ -359,3 +359,39 @@ let temp = thermos.temperature; // 24.44 in Celsius
 // thermos.temperature = 26;
 // temp = thermos.temperature; // 26 in Celsius
 // console.log(temp);
+
+
+// Section 20: Create a Module Script
+// 
+// Add a script to the HTML document of type module 
+// and give it the source file of index.js
+
+// Only change code below this line
+`
+<html>
+  <body>
+    <!-- Only change code below this line -->
+    <script type="module" src="filename.js"></script>
+    <!-- Only change code above this line -->
+  </body>
+</html>
+`
+
+// Section 21: Use export to Share a Code Block
+// 
+// There are two string-related functions in the editor. 
+// Export both of them using the method of your choice..js
+
+// Only change code below this line
+
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+//Placing them all in the export statement
+export {
+  uppercaseString, lowercaseString
+}
