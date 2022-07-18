@@ -426,3 +426,13 @@ import * as stringFunctions from "./string_functions.js";
 export default function subtract(x, y) {
   return x - y;
 }
+
+// Section 25: Import a Default Export
+// 
+// In the last challenge, you learned about export default and its uses. 
+// To import a default export, you need to use a different import syntax. 
+// In the following code, import the default export from the math_functions.js file, 
+// found in the same directory as this file. Give the import the name subtract.
+
+import subtract from "./string_functions.js";
+subtract(7, 4);
