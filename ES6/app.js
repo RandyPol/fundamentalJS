@@ -328,4 +328,34 @@ class Vegetable {
 // Only change code above this line
 
 const carrot = new Vegetable('carrot');
-console.log(carrot.name); // Should display 'carrot'
+// console.log(carrot.name); // Should display 'carrot'
+
+
+
+
+// Section 19: Use getters and setters to Control Access to an Object
+// 
+
+// Only change code below this line
+class Thermostat {
+  constructor(tempValue) {
+    this.tempValue = (5 / 9) * (tempValue - 32);
+  }
+  // Set
+  set temperature(arg) {
+    this.tempValue = arg;
+  }
+  // Get
+  get temperature() {
+    //  C = 5/9 * (F - 32)
+    return this.tempValue;
+  }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+// console.log(temp);
+// thermos.temperature = 26;
+// temp = thermos.temperature; // 26 in Celsius
+// console.log(temp);
