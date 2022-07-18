@@ -434,5 +434,12 @@ export default function subtract(x, y) {
 // In the following code, import the default export from the math_functions.js file, 
 // found in the same directory as this file. Give the import the name subtract.
 
-import subtract from "./string_functions.js";
-subtract(7, 4);
+import subtract from "./math_functions.js";
+
+
+
+// Section 26: Create a JavaScript Promise
+// 
+// Promise is a constructor function, so you need to use the new keyword to create one. 
+// It takes a function, as its argument, with two parameters - resolve and reject. 
+// These are methods used to determine the outcome of the promise. 
