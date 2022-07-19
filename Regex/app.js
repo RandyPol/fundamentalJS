@@ -129,8 +129,29 @@
 // Match all the letters in the string quoteSample.
 // Note: Be sure to match both uppercase and lowercase letters.
 
-let quoteSample = "The quick brown fox jumps over the lazy dog.";
-let alphabetRegex = /[a-z]/ig; // Change this line
-let result = quoteSample.match(alphabetRegex); // Change this line
+// let quoteSample = "The quick brown fox jumps over the lazy dog.";
+// let alphabetRegex = /[a-z]/ig; // Change this line
+// let result = quoteSample.match(alphabetRegex); // Change this line
+// console.log(result)
+////////////////////////////////////////////////////////////////////////////
+
+
+// Section 10: Match Numbers and Letters of the Alphabet
+// 
+// 
+// Using the hyphen (-) to match a range of characters is not limited to letters. 
+// It also works to match a range of numbers.
+
+// For example, /[0-5]/ matches any number between 0 and 5, including the 0 and 5.
+// 
+// Create a single regex that matches a range of letters between h and s, and a range of numbers 
+// between 2 and 6. Remember to include the appropriate flags in the regex.match(alphabetRegex);
+
+
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/ig;
+let result = quoteSample.match(myRegex);
 console.log(result)
+
+
 ////////////////////////////////////////////////////////////////////////////
