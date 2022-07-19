@@ -349,8 +349,52 @@
 
 // Change the regex userCheck to fit the constraints listed above.
 
-let username = "JackOfAllTrades";
-let userCheck = /^([A-z]{2,}|[A-z]\d\d)\d*$/ig;
-let result = userCheck.test(username);
+// let username = "JackOfAllTrades";
+// let userCheck = /^([A-z]{2,}|[A-z]\d\d)\d*$/ig;
+// let result = userCheck.test(username);
 // console.log(result)
+////////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 22: Match Whitespace
+// 
+// The challenges so far have covered matching letters of the alphabet and numbers. 
+// You can also match the whitespace or spaces between letters.
+// Change the regex countWhiteSpace to look for multiple whitespace characters in a string.
+
+
+// let sample = "Whitespace is important in separating words";
+// let countWhiteSpace = /\s/g;
+// let result = sample.match(countWhiteSpace);
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 23: Match Non-Whitespace Characters
+// 
+// \S === [^\r\t\f\n\v]
+// Change the regex countNonWhiteSpace to look for multiple non-whitespace characters in a string.
+
+// let sample = "Whitespace is important in separating words";
+// let countNonWhiteSpace = /\S/g; 
+// let result = sample.match(countNonWhiteSpace);
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 24: Specify Upper and Lower Number of Matches
+// 
+// You can specify the lower and upper number of patterns with quantity specifiers. 
+// Quantity specifiers are used with curly brackets ({ and }). You put two numbers 
+// between the curly brackets - for the lower and upper number of patterns.
+// 
+// Change the regex ohRegex to match the entire phrase Oh no only when it has 3 to 6 letter h's.
+
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\s/g;
+let result = ohRegex.test(ohStr);
+
 ////////////////////////////////////////////////////////////////////////////
