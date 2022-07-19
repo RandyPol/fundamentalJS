@@ -230,10 +230,10 @@
 // text "<h1>Winter is coming</h1>". Remember the wildcard . in a 
 // regular expression matches any character.
 
-let text = "<h1>Winter is coming</h1>";
-let myRegex = /<.*?>/; // Change this line
-let result = text.match(myRegex);
-console.log(result)
+// let text = "<h1>Winter is coming</h1>";
+// let myRegex = /<.*?>/; // Change this line
+// let result = text.match(myRegex);
+// console.log(result)
 
 ////////////////////////////////////////////////////////////////////////////
 
@@ -247,7 +247,41 @@ console.log(result)
 // you don't know how many. However, you do know that they stay 
 // close together when they are around other people. You are responsible 
 // for finding all of the criminals at once.
-// 
+// // 
 
-let reCriminals = /C+/g; // Change this line
+// let reCriminals = /C+/g; // Change this line
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// Section 16: Match Beginning String Patterns
+
+// 
+// ^ 
+// Outside of a character set, the caret is used to search 
+// for patterns at the beginning of strings.
+// Use the caret character in a regex to find Cal only in the 
+// beginning of the string rickyAndCal.
+
+// let rickyAndCal = "Cal and Ricky both like racing.";
+// let calRegex = /^Cal/;
+// let result = calRegex.test(rickyAndCal);
+
+////////////////////////////////////////////////////////////////////////////
+
+
+// Section 17: Match Ending String Patterns
+// 
+// $
+// You can search the end of strings using the dollar sign 
+// character $ at the end of the regex
+// 
+// Use the anchor character ($) to match the string caboose at the end of the string caboose.
+
+// let caboose = "The last car on a train is the caboose";
+// let lastRegex = /caboose$/;
+// let result = lastRegex.test(caboose);
+// console.log(result)
 ////////////////////////////////////////////////////////////////////////////
