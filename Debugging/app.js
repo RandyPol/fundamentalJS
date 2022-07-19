@@ -159,26 +159,43 @@
 // like [[0, 0], [0, 0], [0, 0]].
 
 
+// function zeroArray(m, n) {
+//     // Creates a 2-D array with m rows and n columns of zeroes
+//     let newArray = [];
+//     let row = [];
+//     for (let i = 0; i < m; i++) {
+//         // Adds the m-th row into newArray
+//         row = [];
+//         for (let j = 0; j < n; j++) {
+//             // Pushes n zeroes into the current row to create the columns
+//             row.push(0);
+//         }
+//         // Pushes the current row, which now has n zeroes in it, to the array
+//         newArray.push(row);
+//     }
+//     return newArray;
+// }
 
-function zeroArray(m, n) {
-    // Creates a 2-D array with m rows and n columns of zeroes
-    let newArray = [];
-    let row = [];
-    for (let i = 0; i < m; i++) {
-        // Adds the m-th row into newArray
-        row = [];
-        for (let j = 0; j < n; j++) {
-            // Pushes n zeroes into the current row to create the columns
-            row.push(0);
-        }
-        // Pushes the current row, which now has n zeroes in it, to the array
-        newArray.push(row);
+// let matrix = zeroArray(3, 2);
+// console.log(matrix);
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 12: Prevent Infinite Loops with a Valid Terminal Condition
+// 
+// The myFunc() function contains an infinite loop because the terminal 
+// condition i != 4 will never evaluate to false (and break the looping) - i 
+// will increment by 2 each pass, and jump right over 4 since i is odd to start. 
+// Fix the comparison operator in the terminal condition so the loop only runs for i 
+// less than or equal to 4.
+
+function myFunc() {
+    for (let i = 1; i != 4; i += 4) {
+        console.log("Still going!");
     }
-    return newArray;
 }
-
-let matrix = zeroArray(3, 2);
-console.log(matrix);
-
 
 ////////////////////////////////////////////////////////////////////////
