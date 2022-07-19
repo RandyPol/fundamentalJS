@@ -293,10 +293,24 @@
 // Use the shorthand character class \w to count the number of alphanumeric 
 // characters in various quotes and strings.
 
-let quoteSample = "The five boxing wizards jump quickly.";
-let alphabetRegexV2 = /\w/g; // Change this line
-let result = quoteSample.match(alphabetRegexV2).length;
-console.log(result)
-console.log(quoteSample.match(alphabetRegexV2))
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let alphabetRegexV2 = /\w/g; // Change this line
+// let result = quoteSample.match(alphabetRegexV2).length;
+// console.log(result)
+// console.log(quoteSample.match(alphabetRegexV2))
 
+////////////////////////////////////////////////////////////////////////////
+
+
+// Section 19: Match Everything But Letters and Numbers
+// 
+// \W
+// Use the shorthand character class \W to count the number of 
+// non-alphanumeric characters in various quotes and strings.
+
+let quoteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g;
+let result = quoteSample.match(nonAlphabetRegex).length;
+console.log(result)
+console.log(quoteSample.match(nonAlphabetRegex))
 ////////////////////////////////////////////////////////////////////////////
