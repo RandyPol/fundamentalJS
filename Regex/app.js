@@ -324,9 +324,25 @@
 // Written out numbers ("six" instead of 6) do not count.
 
 
-let movieName = "2001: A Space Odyssey";
-let numRegex = /\d/g;
-let result = movieName.match(numRegex).length;
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\d/g;
+// let result = movieName.match(numRegex).length;
 // console.log(result)
 
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// Section 21: Match All Non-Numbers
+// 
+// The last challenge showed how to search for digits using the shortcut \d 
+// with a lowercase d. You can also search for non-digits using a similar shortcut 
+// that uses an uppercase D instead.
+
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let result = movieName.match(noNumRegex).length;
+console.log(result)
 ////////////////////////////////////////////////////////////////////////////
