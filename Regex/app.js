@@ -285,3 +285,18 @@
 // let result = lastRegex.test(caboose);
 // console.log(result)
 ////////////////////////////////////////////////////////////////////////////
+
+
+// Section 18: Match All Letters and Numbers
+// 
+// \w
+// Use the shorthand character class \w to count the number of alphanumeric 
+// characters in various quotes and strings.
+
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // Change this line
+let result = quoteSample.match(alphabetRegexV2).length;
+console.log(result)
+console.log(quoteSample.match(alphabetRegexV2))
+
+////////////////////////////////////////////////////////////////////////////
