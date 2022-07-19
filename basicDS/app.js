@@ -67,13 +67,31 @@
 // and assign the removed elements to their corresponding variables, so that 
 // the returned array contains their values.
 
-function popShift(arr) {
-    let popped = arr.pop();
-    let shifted = arr.shift();
-    return [shifted, popped];
-}
+// function popShift(arr) {
+//     let popped = arr.pop();
+//     let shifted = arr.shift();
+//     return [shifted, popped];
+// }
 
-console.log(popShift(['challenge', 'is', 'not', 'complete']));
+// console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// Section 5: Remove Items Using splice()
+// 
+// We've initialized an array arr. Use splice() to remove elements 
+// from arr, so that it only contains elements that sum to the value of 10.
+
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// Only change code below this line
+arr.splice(1, 4);
+// Only change code above this line
+console.log(arr);
 
 
 ////////////////////////////////////////////////////////////////////////
