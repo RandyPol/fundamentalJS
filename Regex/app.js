@@ -166,9 +166,29 @@
 // Create a single regex that matches all characters that are not a number or a vowel.
 //  Remember to include the appropriate flags in the regex.
 
-let quoteSample = "3 blind mice.";
-let myRegex = /[^aeiou0-9]/gi; // Change this line
-let result = quoteSample.match(myRegex);
-console.log(result)
+// let quoteSample = "3 blind mice.";
+// let myRegex = /[^aeiou0-9]/gi; // Change this line
+// let result = quoteSample.match(myRegex);
+// console.log(result)
 
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// Section 12: Match Characters that Occur One or More Times
+// 
+// 
+// Sometimes, you need to match a character (or group of characters) 
+// that appears one or more times in a row. This means it occurs at least once, 
+// and may be repeated.
+// 
+// You want to find matches when the letter s occurs one or more times in Mississippi. 
+// Write a regex that uses the + sign.
+
+// let difficultSpelling = "Mississippi";
+// let myRegex = /s+/gi;
+// let result = difficultSpelling.match(myRegex);
+// console.log(result)
 ////////////////////////////////////////////////////////////////////////////
