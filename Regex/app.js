@@ -289,7 +289,7 @@
 
 // Section 18: Match All Letters and Numbers
 // 
-// \w
+// \w same as [A-Za-z]
 // Use the shorthand character class \w to count the number of alphanumeric 
 // characters in various quotes and strings.
 
@@ -308,9 +308,25 @@
 // Use the shorthand character class \W to count the number of 
 // non-alphanumeric characters in various quotes and strings.
 
-let quoteSample = "The five boxing wizards jump quickly.";
-let nonAlphabetRegex = /\W/g;
-let result = quoteSample.match(nonAlphabetRegex).length;
-console.log(result)
-console.log(quoteSample.match(nonAlphabetRegex))
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let nonAlphabetRegex = /\W/g;
+// let result = quoteSample.match(nonAlphabetRegex).length;
+// console.log(result)
+// console.log(quoteSample.match(nonAlphabetRegex))
+////////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 20: Match All Numbers
+// 
+// \d is the same as [0-9]
+// Use the shorthand character class \d to count how many digits are in movie titles. 
+// Written out numbers ("six" instead of 6) do not count.
+
+
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g;
+let result = movieName.match(numRegex).length;
+// console.log(result)
+
 ////////////////////////////////////////////////////////////////////////////
