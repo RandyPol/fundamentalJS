@@ -467,8 +467,30 @@
 // characters long, and have two consecutive digits.
 
 
-let sampleWord = "astronaut";
-let pwRegex = /(?=\w{6})(?=\w*\d{2})/ig
-let result = pwRegex.test(sampleWord);
+// let sampleWord = "astronaut";
+// let pwRegex = /(?=\w{6})(?=\w*\d{2})/ig
+// let result = pwRegex.test(sampleWord);
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 29: Check For Mixed Grouping of Characters
+// 
+// Sometimes we want to check for groups of characters using 
+// a Regular Expression and to achieve that we use parentheses ().
+// 
+// Fix the regex so that it checks for the names of Franklin 
+// Roosevelt or Eleanor Roosevelt in a case sensitive manner and it 
+// should make concessions for middle names.
+// 
+// Then fix the code so that the regex that you have created is checked against 
+// myString and either true or false is returned depending on whether the regex matches.
+
+
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin D.|Eleanor)\sRoosevelt/;
+let result = myRegex.test(myString); //
+
 
 ////////////////////////////////////////////////////////////////////////////
