@@ -32,10 +32,46 @@
 // two variables seven and three in the code.
 
 
-let seven = 7;
-let three = "3";
-console.log(seven + three);
-// Only change code below this line
-console.log(typeof seven)
-console.log(typeof three)
+// let seven = 7;
+// let three = "3";
+// console.log(seven + three);
+// // Only change code below this line
+// console.log(typeof seven)
+// console.log(typeof three)
+////////////////////////////////////////////////////////////////////////
+
+
+// Section 4: Catch Misspelled Variable and Function Names
+// 
+//Fix the two spelling errors in the code so the netWorkingCapital calculation works.
+
+
+// let receivables = 10;
+// let payables = 8;
+// let netWorkingCapital = receivables - payables;
+// console.log(`Net working capital is: ${netWorkingCapital}`);
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+// Section 5: Catch Unclosed Parentheses, Brackets, Braces and Quotes
+// 
+// Fix the two pair errors in the code.
+
+// let myArray = [1, 2, 3];
+// let arraySum = myArray.reduce((previous, current) => previous + current);
+// console.log(`Sum of array values is: ${arraySum}`);
+
+////////////////////////////////////////////////////////////////////////
+
+
+// Section 6: Catch Mixed Usage of Single and Double Quotes
+// 
+// JavaScript allows the use of both single (') and double (") quotes 
+// to declare a string. Deciding which one to use generally comes down to 
+// personal preference, with some exceptions.
+
+// let innerHtml = "<p>Click here to <a href=\"#Home\">return home</a></p>";
+// console.log(innerHtml);
 ////////////////////////////////////////////////////////////////////////
