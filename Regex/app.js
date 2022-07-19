@@ -393,8 +393,82 @@
 // 
 // Change the regex ohRegex to match the entire phrase Oh no only when it has 3 to 6 letter h's.
 
-let ohStr = "Ohhh no";
-let ohRegex = /Oh{3,6}\s/g;
-let result = ohRegex.test(ohStr);
+// let ohStr = "Ohhh no";
+// let ohRegex = /Oh{3,6}\s/g;
+// let result = ohRegex.test(ohStr);
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// Section 25: Specify Only the Lower Number of Matches
+// 
+//You can specify the lower and upper number of patterns with quantity
+// specifiers using curly brackets. Sometimes you only want to specify the 
+// lower number of patterns with no upper limit. 
+// 
+// Change the regex haRegex to match the word Hazzah only when it has four or more letter z's.
+
+// let haStr = "Hazzzzah";
+// let haRegex = /Haz{4,}ah/g;
+// let result = haRegex.test(haStr);
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 26: Specify Exact Number of Matches
+// 
+// You can specify the lower and upper number of patterns with quantity 
+// specifiers using curly brackets. Sometimes you only want a specific number of matches.
+// 
+// Change the regex timRegex to match the word Timber only when it has four letter m's.
+
+
+// let timStr = "Timmmmber";
+// let timRegex = /Tim{4}ber/g;
+// let result = timRegex.test(timStr);
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+// Section 27: Check for All or None
+// 
+// You can specify the possible existence of an element with a question mark, ?. 
+// This checks for zero or one of the preceding element. You can think of this symbol 
+// as saying the previous element is optional.
+// 
+// Change the regex favRegex to match both the American English (favorite) 
+// and the British English (favourite) version of the word.
+
+// let favWord = "favorite";
+// let favRegex = /favou?rite/g;
+// let result = favRegex.test(favWord);
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+// Section 28: Positive and Negative Lookahead
+// 
+// Lookaheads are patterns that tell JavaScript to look-ahead 
+// in your string to check for patterns further along. This can 
+// be useful when you want to search for multiple patterns over the same string.
+// 
+// There are two kinds of lookaheads: positive lookahead and negative lookahead.
+// Use lookaheads in the pwRegex to match passwords that are greater than 5 
+// characters long, and have two consecutive digits.
+
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6})(?=\w*\d{2})/ig
+let result = pwRegex.test(sampleWord);
 
 ////////////////////////////////////////////////////////////////////////////
