@@ -488,9 +488,28 @@
 // myString and either true or false is returned depending on whether the regex matches.
 
 
-let myString = "Eleanor Roosevelt";
-let myRegex = /(Franklin D.|Eleanor)\sRoosevelt/;
-let result = myRegex.test(myString); //
+// let myString = "Eleanor Roosevelt";
+// let myRegex = /(Franklin D.|Eleanor)\sRoosevelt/;
+// let result = myRegex.test(myString); //
 
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// Section 30: Reuse Patterns Using Capture Groups
+// 
+// Capture groups can be used to find repeated substrings.
+
+// 
+// Use capture groups in reRegex to match a string that consists 
+// of only the same number repeated exactly three times separated by single spaces.
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/;
+let result = repeatNum.match(reRegex);
+console.log(result)
 
 ////////////////////////////////////////////////////////////////////////////
