@@ -208,7 +208,7 @@
 
 // const chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!"
 // // Only change code below this line
-// let chewieRegex = /Aa*/; // Change this line
+// let chewieRegex = /Aa*/; 
 // // Only change code above this line
 
 // let result = chewieQuote.match(chewieRegex);
@@ -231,7 +231,7 @@
 // regular expression matches any character.
 
 // let text = "<h1>Winter is coming</h1>";
-// let myRegex = /<.*?>/; // Change this line
+// let myRegex = /<.*?>/; // 
 // let result = text.match(myRegex);
 // console.log(result)
 
@@ -289,7 +289,7 @@
 
 // Section 18: Match All Letters and Numbers
 // 
-// \w same as [A-Za-z]
+// \w same as [A-Za-z0-9]
 // Use the shorthand character class \w to count the number of alphanumeric 
 // characters in various quotes and strings.
 
@@ -335,14 +335,22 @@
 
 
 
-// Section 21: Match All Non-Numbers
+// Section 21: Restrict Possible Usernames
 // 
-// The last challenge showed how to search for digits using the shortcut \d 
-// with a lowercase d. You can also search for non-digits using a similar shortcut 
-// that uses an uppercase D instead.
+// You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.
 
-let movieName = "2001: A Space Odyssey";
-let noNumRegex = /\D/g; // Change this line
-let result = movieName.match(noNumRegex).length;
-console.log(result)
+// 1) Usernames can only use alpha-numeric characters.
+
+// 2) The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+
+// 3) Username letters can be lowercase and uppercase.
+
+// 4) Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+
+// Change the regex userCheck to fit the constraints listed above.
+
+let username = "JackOfAllTrades";
+let userCheck = /^([A-z]{2,}|[A-z]\d\d)\d*$/ig;
+let result = userCheck.test(username);
+// console.log(result)
 ////////////////////////////////////////////////////////////////////////////
