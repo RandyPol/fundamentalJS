@@ -206,13 +206,33 @@
 // The character to do this is the asterisk or star: *.
 
 
-const chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!"
-// Only change code below this line
-let chewieRegex = /Aa*/; // Change this line
-// Only change code above this line
+// const chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!"
+// // Only change code below this line
+// let chewieRegex = /Aa*/; // Change this line
+// // Only change code above this line
 
-let result = chewieQuote.match(chewieRegex);
+// let result = chewieQuote.match(chewieRegex);
+// console.log(result)
+
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 14: Find Characters with Lazy Matching
+// 
+// In regular expressions, a greedy match finds the longest possible
+//  part of a string that fits the regex pattern and returns it as a match. 
+//  The alternative is called a lazy match, which finds the smallest possible 
+//  part of the string that satisfies the regex pattern.
+// 
+// Fix the regex /<.*>/ to return the HTML tag <h1> and not the
+// text "<h1>Winter is coming</h1>". Remember the wildcard . in a 
+// regular expression matches any character.
+
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/; // Change this line
+let result = text.match(myRegex);
 console.log(result)
-
 
 ////////////////////////////////////////////////////////////////////////////
