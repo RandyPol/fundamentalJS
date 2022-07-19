@@ -560,9 +560,9 @@
 // let result = hello.match(wsRegex)[0];
 // console.log(result)
 // Another Option
-let hello = "   Hello, World!  ";
-let wsRegex = /^\s+|\s+$/g; // 
-let result = hello.replace(wsRegex, '');
-console.log(result)
+// let hello = "   Hello, World!  ";
+// let wsRegex = /^\s+|\s+$/g; // 
+// let result = hello.replace(wsRegex, '');
+// console.log(result)
 
 ////////////////////////////////////////////////////////////////////////////
