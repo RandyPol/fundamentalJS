@@ -348,3 +348,35 @@
 // console.log(mutation(["hello", "he@y"]));
 
 // ////////////////////////////////////////////////////////////////////////
+
+
+
+// 
+// Section 16: Chunky Monkey
+// // 
+// Write a function that splits an array (first argument) into groups the length of size 
+// (second argument) and returns them as a two-dimensional array.
+
+
+function chunkArrayInGroups(arr, size) {
+    let newArr = [];
+    let arrSize = arr.length;//4
+    let endIndex = size;
+    for (let i = 0; i <= arrSize; i += size) {
+        if ((newArr.length < arrSize / size)) {
+            let newInner = arr.slice(i, endIndex)
+            newArr.push(newInner)
+            endIndex += size;
+        } else if (arr.slice(i).length > 0) {
+            newArr.push(arr.slice(i))
+        }
+    }
+    return newArr
+}
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
+
+
+
+
+// ////////////////////////////////////////////////////////////////////////
