@@ -108,18 +108,40 @@
 // access each member with array syntax arr[i].
 
 
-function largestOfFour(arr) {
-    let top4 = [];
-    for (let array of arr) {
-        top4.push(array.reduce((a, b) => {
-            return Math.max(a, b)
-        }))
-    }
-    return top4
-}
+// function largestOfFour(arr) {
+//     let top4 = [];
+//     for (let array of arr) {
+//         top4.push(array.reduce((a, b) => {
+//             return Math.max(a, b)
+//         }))
+//     }
+//     return top4
+// }
 
-largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+// largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
 
 
 ////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// 
+// Section 6: Confirm the Ending
+// 
+// Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+// This challenge can be solved with the .endsWith() method, which was introduced in ES2015. 
+// But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+
+
+// function confirmEnding(str, target) {
+//     let streLen = str.length - target.length;
+//     return str.slice(streLen) === target ? true : false
+// }
+
+// console.log(confirmEnding("Bastian", "n"));
+
+// ////////////////////////////////////////////////////////////////////////
