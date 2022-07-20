@@ -380,39 +380,83 @@
 // Finish writing the function so that it returns true if the object passed 
 // to it contains all four names, Alan, Jeff, Sarah and Ryan and returns false otherwise.
 
-let users = {
-    Alan: {
-        age: 27,
-        online: true
-    },
-    Jeff: {
-        age: 32,
-        online: true
-    },
-    Sarah: {
-        age: 48,
-        online: true
-    },
-    Ryan: {
-        age: 19,
-        online: true
-    }
-};
+// let users = {
+//     Alan: {
+//         age: 27,
+//         online: true
+//     },
+//     Jeff: {
+//         age: 32,
+//         online: true
+//     },
+//     Sarah: {
+//         age: 48,
+//         online: true
+//     },
+//     Ryan: {
+//         age: 19,
+//         online: true
+//     }
+// };
 
-function isEveryoneHere(userObj) {
-    let allIn = true;
-    // Only change code below this line
-    "Alan" in userObj ? '' : allIn = false;
-    "Jeff" in userObj ? '' : allIn = false;
-    "Sarah" in userObj ? '' : allIn = false;
-    "Ryan" in userObj ? '' : allIn = false;
-    return allIn
-    // Only change code above this line
-}
+// function isEveryoneHere(userObj) {
+//     let allIn = true;
+//     // Only change code below this line
+//     "Alan" in userObj ? '' : allIn = false;
+//     "Jeff" in userObj ? '' : allIn = false;
+//     "Sarah" in userObj ? '' : allIn = false;
+//     "Ryan" in userObj ? '' : allIn = false;
+//     return allIn
+//     // Only change code above this line
+// }
 
-console.log(isEveryoneHere(users));
+// console.log(isEveryoneHere(users));
 
 
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// Section 18: Iterate Through the Keys of an Object with a for...in Statement
+// 
+// We've defined a function countOnline which accepts one argument (a users object). 
+// Use a for...in statement within this function to loop through the users object passed
+//  into the function and return the number of users whose online property is set to true. 
+//  An example of a users object which could be passed to countOnline is shown below. Each 
+//  user will have an online property with either a true or false value.
+
+
+// console.log(`Key: ${key}. users[key]: ${users[key]}.  users[key]["online"]: ${users[key]["online"]}`)
+
+
+// const users = {
+//     Alan: {
+//         online: false
+//     },
+//     Jeff: {
+//         online: true
+//     },
+//     Sarah: {
+//         online: true
+//     }
+// }
+
+// function countOnline(usersObj) {
+//     // Only change code below this line
+//     let numCount = 0;
+//     for (let key in usersObj) {
+//         if (usersObj[key]["online"]) {
+//             numCount++;
+//         }
+//     }
+//     return numCount;
+//     // Only change code above this line
+// }
+// // countOnline(users);
+// console.log(countOnline(users));
 
 ////////////////////////////////////////////////////////////////////////////
 
