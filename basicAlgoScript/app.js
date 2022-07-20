@@ -86,13 +86,40 @@
 // Return the length of the longest word in the provided sentence.
 // Your response should be a number.
 
-function findLongestWordLength(str) {
-    let longestWord = 0;
-    str.split(" ").forEach(word => word.length > longestWord ? longestWord = word.length : '')
-    return longestWord;
+// function findLongestWordLength(str) {
+//     let longestWord = 0;
+//     str.split(" ").forEach(word => word.length > longestWord ? longestWord = word.length : '')
+//     return longestWord;
+// }
+
+// console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 5: Return Largest Numbers in Arrays
+// 
+// Return an array consisting of the largest number from each provided sub-array. 
+// For simplicity, the provided array will contain exactly 4 sub-arrays.
+
+// Remember, you can iterate through an array with a simple for loop, and 
+// access each member with array syntax arr[i].
+
+
+function largestOfFour(arr) {
+    let top4 = [];
+    for (let array of arr) {
+        top4.push(array.reduce((a, b) => {
+            return Math.max(a, b)
+        }))
+    }
+    return top4
 }
 
-console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
 
 
 ////////////////////////////////////////////////////////////////////////
