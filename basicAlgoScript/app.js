@@ -75,5 +75,24 @@
 // console.log(factorialize(5));
 
 
+////////////////////////////////////////////////////////////////////////
+
+
+
+
+// 
+// Section 4: Find the Longest Word in a String
+// 
+// Return the length of the longest word in the provided sentence.
+// Your response should be a number.
+
+function findLongestWordLength(str) {
+    let longestWord = 0;
+    str.split(" ").forEach(word => word.length > longestWord ? longestWord = word.length : '')
+    return longestWord;
+}
+
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+
 
 ////////////////////////////////////////////////////////////////////////
