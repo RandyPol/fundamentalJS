@@ -173,13 +173,37 @@
 // Modify the function using the spread operator so that it returns the array 
 // ['learning', 'to', 'code', 'is', 'fun'].
 
-function spreadOut() {
-    let fragment = ['to', 'code'];
-    let sentence = ["learning", ...fragment, "is", "fun"]
-    return sentence;
+// function spreadOut() {
+//     let fragment = ['to', 'code'];
+//     let sentence = ["learning", ...fragment, "is", "fun"]
+//     return sentence;
+// }
+// console.log(spreadOut());
+// // ////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// Section 10: Check For The Presence of an Element With indexOf()
+// 
+// indexOf() can be incredibly useful for quickly checking for the presence 
+// of an element on an array. We have defined a function, quickCheck, that 
+// takes an array and an element as arguments. Modify the function using 
+// indexOf() so that it returns true if the passed element exists on the array, 
+// and false if it does not.
+
+function quickCheck(arr, elem) {
+    // Only change code below this line
+    console.log(arr.indexOf(elem))
+    return arr.indexOf(elem) === -1 ? console.log(elem, false) : console.log(elem, true);
+    // Only change code above this line
 }
 
-console.log(spreadOut());
-// // ////////////////////////////////////////////////////////////////////////
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'onions'));
+
+
+////////////////////////////////////////////////////////////////////////////
+
 
 
