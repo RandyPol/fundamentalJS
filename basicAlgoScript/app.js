@@ -268,3 +268,21 @@
 // console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
 
 // ////////////////////////////////////////////////////////////////////////
+
+
+
+// 
+// Section 13: Falsy Bouncer
+// 
+// Remove all falsy values from an array.
+// Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+// Hint: Try converting each value to a Boolean.
+
+
+// function bouncer(arr) {
+//     return arr.filter(item => item ? true : false)
+// }
+
+// console.log(bouncer([7, "ate", "", false, 9]));
+
+// ////////////////////////////////////////////////////////////////////////
