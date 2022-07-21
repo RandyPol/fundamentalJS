@@ -28,3 +28,9 @@ console.log(dog.numLegs)
 // Using the dog object, give it a method called sayLegs. The method should return the sentence This dog has 4 legs.
 console.log(dog.sayLegs())
 ////////////////////////////////////////////////////////////////////////
+
+// Section 4: Make Code More Reusable with the this Keyword
+// 
+// Modify the dog.sayLegs method to remove any references to dog. Use the duck example for guidance.
+console.log(dog.sayLegs())
+////////////////////////////////////////////////////////////////////////
