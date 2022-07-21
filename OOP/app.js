@@ -9,6 +9,9 @@
 let dog = {
     name: "Tommy",
     numLegs: 4,
+    sayLegs() {
+        return `This dog has ${this.numLegs} legs.`
+    }
 
 }
 ////////////////////////////////////////////////////////////////////////
@@ -18,4 +21,10 @@ let dog = {
 
 console.log(dog.name)
 console.log(dog.numLegs)
+////////////////////////////////////////////////////////////////////////
+
+// Section 3: Create a Method on an Object
+// 
+// Using the dog object, give it a method called sayLegs. The method should return the sentence This dog has 4 legs.
+console.log(dog.sayLegs())
 ////////////////////////////////////////////////////////////////////////
