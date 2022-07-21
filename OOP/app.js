@@ -150,7 +150,7 @@
 
 ////////////////////////////////////////////////////////////////////////
 
-
+// 
 // Section 11: Iterate Over All Properties
 // 
 // 
@@ -161,26 +161,46 @@
 // Add all of the own properties of beagle to the array ownProps. Add all of the prototype properties 
 // of Dog to the array prototypeProps.
 
-function Dog(name) {
-    this.name = name;
-}
+// function Dog(name) {
+//     this.name = name;
+// }
 
-Dog.prototype.numLegs = 4;
+// Dog.prototype.numLegs = 4;
 
-let beagle = new Dog("Snoopy");
+// let beagle = new Dog("Snoopy");
 
-let ownProps = [];
-let prototypeProps = [];
+// let ownProps = [];
+// let prototypeProps = [];
 
-// Only change code below this line
+// // Only change code below this line
 
-for (let property in beagle) {
-    if (beagle.hasOwnProperty(property)) {
-        ownProps.push(property)
-    } else {
-        prototypeProps.push(property)
-    }
-}
+// for (let property in beagle) {
+//     if (beagle.hasOwnProperty(property)) {
+//         ownProps.push(property)
+//     } else {
+//         prototypeProps.push(property)
+//     }
+// }
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 12: Understand the Constructor Property
+// 
+// 
+// Write a joinDogFraternity function that takes a candidate parameter and, using 
+// the constructor property, return true if the candidate is a Dog, otherwise return false.
+
+// function Dog(name) {
+//     this.name = name;
+// }
+
+// // Only change code below this line
+// function joinDogFraternity(candidate) {
+//     return candidate.constructor === Dog ? true : false;
+// }
 
 
 ////////////////////////////////////////////////////////////////////////
