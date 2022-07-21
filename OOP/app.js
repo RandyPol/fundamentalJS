@@ -36,11 +36,27 @@
 // ////////////////////////////////////////////////////////////////////////
 
 
-
 // Section 5: Define a Constructor Function
 // 
 // Create a constructor, Dog, with properties name, color, and numLegs that 
 // are set to a string, a string, and a number, respectively.
+
+// function Dog(name, color, numLegs) {
+//     this.name = name;
+//     this.color = color;
+//     this.numLegs = numLegs;
+// }
+
+// let dogOne = new Dog('Tommy', "Red", 5)
+// console.log(dogOne)
+////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 6: Use a Constructor to Create Objects
+// 
+// Use the Dog constructor from the last lesson to create a new instance of Dog, 
+// assigning it to a variable hound.
 
 function Dog(name, color, numLegs) {
     this.name = name;
@@ -48,6 +64,6 @@ function Dog(name, color, numLegs) {
     this.numLegs = numLegs;
 }
 
-let dogOne = new Dog('Tommy', "Red", 5)
+let hound = new Dog('Tommy', "Red", 5)
 console.log(dogOne)
 ////////////////////////////////////////////////////////////////////////
