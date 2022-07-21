@@ -12,3 +12,10 @@ let dog = {
 
 }
 ////////////////////////////////////////////////////////////////////////
+// Section 2: Use Dot Notation to Access the Properties of an Object
+// 
+// Create a dog object with name and numLegs properties, and set them to a string and a number, respectively.
+
+console.log(dog.name)
+console.log(dog.numLegs)
+////////////////////////////////////////////////////////////////////////
