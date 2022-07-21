@@ -93,10 +93,34 @@
 // Create a new instance of the House constructor, calling it myHouse and passing a number of bedrooms. 
 // Then, use instanceof to verify that it is an instance of House.
 
-function House(numBedrooms) {
-    this.numBedrooms = numBedrooms;
+// function House(numBedrooms) {
+//     this.numBedrooms = numBedrooms;
+// }
+
+// let myHouse = new House(10);
+// console.log(myHouse instanceof House)
+////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 9: Understand Own Properties
+// 
+// Add the own properties of canary to the array ownProps.
+
+function Bird(name) {
+    this.name = name;
+    this.numLegs = 2;
 }
 
-let myHouse = new House(10);
-console.log(myHouse instanceof House)
+let canary = new Bird("Tweety");
+let ownProps = [];
+
+
+for (let prop in canary) {
+    if (canary.hasOwnProperty(prop))
+        ownProps.push(prop)
+}
+
+console.log(ownProps)
+
 ////////////////////////////////////////////////////////////////////////
