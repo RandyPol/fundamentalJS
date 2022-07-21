@@ -107,20 +107,45 @@
 // 
 // Add the own properties of canary to the array ownProps.
 
-function Bird(name) {
-    this.name = name;
-    this.numLegs = 2;
-}
+// function Bird(name) {
+//     this.name = name;
+//     this.numLegs = 2;
+// }
 
-let canary = new Bird("Tweety");
-let ownProps = [];
+// let canary = new Bird("Tweety");
+// let ownProps = [];
 
 
-for (let prop in canary) {
-    if (canary.hasOwnProperty(prop))
-        ownProps.push(prop)
-}
+// for (let prop in canary) {
+//     if (canary.hasOwnProperty(prop))
+//         ownProps.push(prop)
+// }
 
-console.log(ownProps)
+// console.log(ownProps)
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+// Section 10: Use Prototype Properties to Reduce Duplicate Code
+// 
+// 
+// better way is to use the prototype of Bird. Properties in the prototype are shared among 
+// ALL instances of Bird. Here's how to add numLegs to the Bird prototype:
+// Bird.prototype.numLegs = 2;
+// Now all instances of Bird have the numLegs property.
+
+
+// Add a numLegs property to the prototype of Dog
+
+// function Dog(name) {
+//     this.name = name;
+// }
+
+// Dog.prototype.numLegs = 4;
+
+// // Only change code above this line
+// let beagle = new Dog("Snoopy");
+
 
 ////////////////////////////////////////////////////////////////////////
