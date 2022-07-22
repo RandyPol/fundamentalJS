@@ -269,11 +269,30 @@
 // 
 // Use isPrototypeOf to check the prototype of beagle.
 
+// function Dog(name) {
+//     this.name = name;
+// }
+
+// let beagle = new Dog("Snoopy");
+
+// console.log(Dog.prototype.isPrototypeOf(beagle))
+////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 16: Understand the Prototype Chain
+// 
+// 
+// Modify the code to show the correct prototype chain.
+
 function Dog(name) {
     this.name = name;
 }
 
 let beagle = new Dog("Snoopy");
 
-console.log(Dog.prototype.isPrototypeOf(beagle))
+Dog.prototype.isPrototypeOf(beagle);  // yields true
+
+// Fix the code below so that it evaluates to true
+Object.prototype.isPrototypeOf(Dog.prototype);
 ////////////////////////////////////////////////////////////////////////
