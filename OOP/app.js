@@ -364,23 +364,46 @@
 // Modify the code so that instances of Dog inherit from Animal.
 
 
+// function Animal() { }
+
+// Animal.prototype = {
+//     constructor: Animal,
+//     eat: function () {
+//         console.log("nom nom nom");
+//     }
+// };
+
+// function Dog() { }
+
+// Dog.prototype = Object.create(Animal.prototype);
+
+
+// let beagle = new Dog();
+// console.log(beagle instanceof Animal)
+// console.log(beagle.eat())
+////////////////////////////////////////////////////////////////////////
+
+// 
+// Section 20: Reset an Inherited Constructor Property
+// 
+// 
+// Fix the code so duck.constructor and beagle.constructor return their respective constructors.
 
 function Animal() { }
-
-Animal.prototype = {
-    constructor: Animal,
-    eat: function () {
-        console.log("nom nom nom");
-    }
-};
-
+function Bird() { }
 function Dog() { }
 
+Bird.prototype = Object.create(Animal.prototype);
 Dog.prototype = Object.create(Animal.prototype);
 
+// Only change code below this line
 
+
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
+
+let duck = new Bird();
 let beagle = new Dog();
-console.log(beagle instanceof Animal)
-console.log(beagle.eat())
+
 ////////////////////////////////////////////////////////////////////////
 
