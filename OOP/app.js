@@ -332,8 +332,27 @@
 //         console.log("nom nom nom");
 //     }
 // };
+////////////////////////////////////////////////////////////////////////
 
+// 
+// Section 18: Inherit Behaviors from a Supertype
+// 
+// 
+// Use Object.create to make two instances of Animal named duck and beagle.
 
+function Animal() { }
 
+Animal.prototype = {
+    constructor: Animal,
+    eat: function () {
+        console.log("nom nom nom");
+    }
+};
+
+// Only change code below this line
+
+let duck = Object.create(Animal.prototype);
+let beagle = Object.create(Animal.prototype);
 
 ////////////////////////////////////////////////////////////////////////
+
