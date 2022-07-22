@@ -285,14 +285,55 @@
 // 
 // Modify the code to show the correct prototype chain.
 
-function Dog(name) {
-    this.name = name;
-}
+// function Dog(name) {
+//     this.name = name;
+// }
 
-let beagle = new Dog("Snoopy");
+// let beagle = new Dog("Snoopy");
 
-Dog.prototype.isPrototypeOf(beagle);  // yields true
+// Dog.prototype.isPrototypeOf(beagle);  // yields true
 
-// Fix the code below so that it evaluates to true
-Object.prototype.isPrototypeOf(Dog.prototype);
+// // Fix the code below so that it evaluates to true
+// Object.prototype.isPrototypeOf(Dog.prototype);
+////////////////////////////////////////////////////////////////////////
+
+
+
+
+// 
+// Section 17: Use Inheritance So You Don't Repeat Yourself
+// 
+// 
+// The eat method is repeated in both Cat and Bear. Edit the code 
+// in the spirit of DRY by moving the eat method to the Animal supertype.
+
+// function Cat(name) {
+//     this.name = name;
+// }
+
+// Cat.prototype = {
+//     constructor: Cat,
+
+// };
+
+// function Bear(name) {
+//     this.name = name;
+// }
+
+// Bear.prototype = {
+//     constructor: Bear,
+// };
+
+// function Animal() { }
+
+// Animal.prototype = {
+//     constructor: Animal,
+//     eat: function () {
+//         console.log("nom nom nom");
+//     }
+// };
+
+
+
+
 ////////////////////////////////////////////////////////////////////////
