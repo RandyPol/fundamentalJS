@@ -418,25 +418,55 @@
 // constructor is set to Dog. Then add a bark() method to the Dog object so that beagle 
 // can both eat() and bark(). The bark() method should print Woof! to the console.
 
-function Animal() { }
-Animal.prototype.eat = function () { console.log("nom nom nom"); };
+// function Animal() { }
+// Animal.prototype.eat = function () { console.log("nom nom nom"); };
 
-function Dog() { }
+// function Dog() { }
 
-// Only change code below this line
+// // Only change code below this line
 
-Dog.prototype = Object.create(Animal.prototype);
-Dog.prototype.constructor = Dog;
-Dog.prototype.bark = function () {
-    console.log("Woof!");
-}
+// Dog.prototype = Object.create(Animal.prototype);
+// Dog.prototype.constructor = Dog;
+// Dog.prototype.bark = function () {
+//     console.log("Woof!");
+// }
 
 
-// Only change code above this line
+// // Only change code above this line
 
-let beagle = new Dog();
+// let beagle = new Dog();
 
 
 
 ////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 22: Override Inherited Methods
+// 
+// 
+// Override the fly() method for Penguin so that it returns the string Alas, this is a flightless bird.
+
+// function Bird() { }
+
+// Bird.prototype.fly = function () { return "I am flying!"; };
+
+// function Penguin() { }
+// Penguin.prototype = Object.create(Bird.prototype);
+// Penguin.prototype.constructor = Penguin;
+
+// // Only change code below this line
+
+// Penguin.prototype.fly = function () {
+//     return 'Alas, this is a flightless bird'
+// }
+
+// // Only change code above this line
+
+// let penguin = new Penguin();
+// console.log(penguin.fly());
+
+
+////////////////////////////////////////////////////////////////////////
+
 
