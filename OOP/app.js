@@ -528,9 +528,31 @@
 // Rewrite the function makeNest and remove its call so instead it's an 
 // anonymous immediately invoked function expression (IIFE).
 
-(function () {
-    console.log("A cozy nest is ready");
-})()
+// (function () {
+//     console.log("A cozy nest is ready");
+// })()
 
 
+////////////////////////////////////////////////////////////////////////
+
+// 
+// Section 26: Use an IIFE to Create a Module
+// 
+// 
+// 
+
+// let funModule = (function () {
+//     return {
+//         isCuteMixin: function (obj) {
+//             obj.isCute = function () {
+//                 return true;
+//             };
+//         },
+//         singMixin: function (obj) {
+//             obj.sing = function () {
+//                 console.log("Singing to an awesome tune");
+//             };
+//         }
+//     }
+// })();
 ////////////////////////////////////////////////////////////////////////
