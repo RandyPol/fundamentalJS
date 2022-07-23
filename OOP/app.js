@@ -476,25 +476,49 @@
 // 
 // Create a mixin named glideMixin that defines a method named glide. 
 // Then use the glideMixin to give both bird and boat the ability to glide.
-let bird = {
-    name: "Donald",
-    numLegs: 2
-};
+// let bird = {
+//     name: "Donald",
+//     numLegs: 2
+// };
 
-let boat = {
-    name: "Warrior",
-    type: "race-boat"
-};
+// let boat = {
+//     name: "Warrior",
+//     type: "race-boat"
+// };
 
-// Only change code below this line
-function glideMixin(obj) {
-    obj.glide = function () {
-        console.log('I\'m gliding!!!!!!')
-    }
-}
-glideMixin(bird);
-glideMixin(boat);
-bird.glide()
+// // Only change code below this line
+// function glideMixin(obj) {
+//     obj.glide = function () {
+//         console.log('I\'m gliding!!!!!!')
+//     }
+// }
+// glideMixin(bird);
+// glideMixin(boat);
+// bird.glide()
 ////////////////////////////////////////////////////////////////////////
 
 
+// 
+// Section 24: Use Closure to Protect Properties Within an Object from Being Modified Externally
+// 
+// 
+// Change how weight is declared in the Bird function so it is a private variable. 
+// Then, create a method getWeight that returns the value of weight 15.
+// This way the variable is public: 
+// function Bird() {
+//     this.weight = 15;
+// }
+// let newDog = new Bird();
+// console.log(newDog.weight)
+
+function Bird() {
+    let weight = 15;
+    this.getWeight = function () {
+        return weight;
+    }
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////
