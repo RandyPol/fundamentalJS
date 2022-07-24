@@ -652,24 +652,49 @@
 // The global variable
 
 
-function getRating(watchList) {
+// function getRating(watchList) {
+//     // Only change code below this line
+//     let averageRating = watchList.filter(({ Director }) => Director === "Christopher Nolan")
+//         .map(({ imdbRating }) => +imdbRating)
+//     let totalNum = averageRating.length;
+//     averageRating = averageRating.reduce((sum, item) => sum + item, 0) / totalNum
+
+
+//     // Only change code above this line
+//     return averageRating;
+// }
+
+// console.log(getRating(watchList));
+
+
+//////////////////////////////////////////////////////////////////////////
+
+
+
+// 
+// Section 15: Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
+// 
+// 
+// Now that you have worked through a few challenges using higher-order functions 
+// like map(), filter(), and reduce(), you now get to apply them to solve a more complex 
+// challenge.
+// 
+// Complete the code for the squareList function using any combination of map(), filter(), 
+// and reduce(). The function should return a new array containing the squares of only the 
+// positive integers (decimal numbers are not integers) when an array of real numbers is passed
+// to it. An example of an array of real numbers is [-3, 4.8, 5, 3, -3.2].
+
+// Note: Your function should not use any kind of for or while loops or the forEach() function.
+
+
+const squareList = arr => {
     // Only change code below this line
-    let averageRating = watchList.filter(({ Director }) => Director === "Christopher Nolan")
-        .map(({ imdbRating }) => +imdbRating)
-    let totalNum = averageRating.length;
-    averageRating = averageRating.reduce((sum, item) => sum + item, 0) / totalNum
-
-
+    return arr.filter(num => Number.isInteger(num) && num > 0).map(num => num ** 2)
+    // return arr;
     // Only change code above this line
-    return averageRating;
-}
+};
 
-console.log(getRating(watchList));
-
-
-
-
-
-
+const squaredIntegers = squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]);
+console.log(squaredIntegers);
 
 //////////////////////////////////////////////////////////////////////////
