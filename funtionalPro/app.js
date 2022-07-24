@@ -623,16 +623,53 @@
 // Change the nonMutatingPush function so it uses concat to add newItem to 
 // the end of original instead of push. The function should return an array.
 
-function nonMutatingPush(original, newItem) {
+// function nonMutatingPush(original, newItem) {
+//     // Only change code below this line
+//     return original.concat(newItem);
+
+//     // Only change code above this line
+// }
+
+// const first = [1, 2, 3];
+// const second = [4, 5];
+// nonMutatingPush(first, second);
+
+
+//////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 14: Use the reduce Method to Analyze Data
+// 
+// 
+// The variable watchList holds an array of objects with information on several movies. 
+// Use reduce to find the average IMDB rating of the movies directed by Christopher Nolan. 
+// Recall from prior challenges how to filter data and map over it to pull what you need. 
+// You may need to create other variables, and return the average rating from getRating 
+// function. Note that the rating values are saved as strings in the object and need to 
+// be converted into numbers before they are used in any mathematical operations.
+
+// The global variable
+
+
+function getRating(watchList) {
     // Only change code below this line
-    return original.concat(newItem);
+    let averageRating = watchList.filter(({ Director }) => Director === "Christopher Nolan")
+        .map(({ imdbRating }) => +imdbRating)
+    let totalNum = averageRating.length;
+    averageRating = averageRating.reduce((sum, item) => sum + item, 0) / totalNum
+
 
     // Only change code above this line
+    return averageRating;
 }
 
-const first = [1, 2, 3];
-const second = [4, 5];
-nonMutatingPush(first, second);
+console.log(getRating(watchList));
+
+
+
+
+
 
 
 //////////////////////////////////////////////////////////////////////////
