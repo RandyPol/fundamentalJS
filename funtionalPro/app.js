@@ -41,7 +41,7 @@
 // const tea4TeamFCC = getTea(40);
 // // Only change code above this line
 
-// ////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
 // 
 // Section 2: Understand Functional Programming Terminology
@@ -82,7 +82,7 @@
 //     tea4GreenTeamFCC,
 //     tea4BlackTeamFCC
 // );
-// ////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
 
 // 
@@ -132,7 +132,7 @@
 //     .join(workWindow.tabClose(1).tabOpen());
 // console.log(finalTabs.tabs);
 
-// ////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
 
 // 
@@ -160,7 +160,7 @@
 
 // console.log(incrementer())
 // console.log(fixedValue)
-// ////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
 
 
@@ -178,11 +178,51 @@
 // Write the incrementer function so it takes an argument, and then returns a result after increasing the value by one.
 
 // The global variable
-let fixedValue = 4;
-// Only change code below this line
-function incrementer(arg) {
-    return arg + 1
-    // Only change code above this line
+// let fixedValue = 4;
+// // Only change code below this line
+// function incrementer(arg) {
+//     return arg + 1
+//     // Only change code above this line
+// }
+
+//////////////////////////////////////////////////////////////////////////
+
+
+
+// 
+// Section 6: Refactor Global Variables Out of Functions
+// 
+// 
+// Rewrite the code so the global array bookList is not changed inside either function. 
+// The add function should add the given bookName to the end of the array passed to it and return a new array (list). 
+// The remove function should remove the given bookName from the array passed to it.
+
+// Note: Both functions should return an array, and any new parameters should be added before the bookName parameter.
+
+// The global variable
+const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+// Change code below this line
+function add(arra, bookName) {
+    const newArra = [...arra]
+    newArra.push(bookName);
+    return newArra;
+
+    // Change code above this line
 }
 
-// ////////////////////////////////////////////////////////////////////////
+// Change code below this line
+function remove(arra, bookName) {
+    const newArra = [...arra]
+    const indexOfItem = newArra.indexOf(bookName);
+    if (indexOfItem >= 0) {
+
+        newArra.splice(indexOfItem, 1);
+        return newArra;
+
+        // Change code above this line
+    }
+}
+console.log(add("KLK"))
+
+//////////////////////////////////////////////////////////////////////////
