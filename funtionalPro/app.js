@@ -793,29 +793,45 @@
 //////////////////////////////////////////////////////////////////////////
 
 
+// // 
+// // Section 20: Apply Functional Programming to Convert Strings to URL Slugs
+// // 
+// // 
+// // Fill in the urlSlug function so it converts a string title and returns the hyphenated version 
+// // for the URL. You can use any of the methods covered in this section, and don't use replace. 
+// // Here are the requirements:
+
+// // The input is a string with spaces and title-cased words
+
+// // The output is a string with the spaces between words replaced by a hyphen (-)
+
+// // The output should be all lower-cased letters
+
+// // The output should not have any spaces
+
+// // Only change code below this line
+// function urlSlug(title) {
+//     return title.trim().toLowerCase().split(/\W+/).join("-")
+// }
+// // Only change code above this line
+// console.log(urlSlug(" Winter Is  Coming"));
+
+//////////////////////////////////////////////////////////////////////////
+
 // 
-// Section 20: Apply Functional Programming to Convert Strings to URL Slugs
+// Section 21: Use the every Method to Check that Every Element in an Array Meets a Criteria
 // 
 // 
-// Fill in the urlSlug function so it converts a string title and returns the hyphenated version 
-// for the URL. You can use any of the methods covered in this section, and don't use replace. 
-// Here are the requirements:
+// Use the every method inside the checkPositive function to check if every element in arr 
+// is positive. The function should return a Boolean value.
 
-// The input is a string with spaces and title-cased words
+function checkPositive(arr) {
+    // Only change code below this line
 
-// The output is a string with the spaces between words replaced by a hyphen (-)
-
-// The output should be all lower-cased letters
-
-// The output should not have any spaces
-
-// Only change code below this line
-function urlSlug(title) {
-    return title.trim().toLowerCase().split(/\W+/).join("-")
+    return arr.every(num => num > 0)
+    // Only change code above this line
 }
-// Only change code above this line
-console.log(urlSlug(" Winter Is  Coming"));
 
-
+console.log(checkPositive([1, 2, 3, -4, 5]));
 
 //////////////////////////////////////////////////////////////////////////
