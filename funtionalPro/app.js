@@ -843,13 +843,34 @@
 // Use the some method inside the checkPositive function to check if any element in arr is positive. 
 // The function should return a Boolean value.
 
-function checkPositive(arr) {
-    // Only change code below this line
-    return arr.some(num => num > 0)
+// function checkPositive(arr) {
+//     // Only change code below this line
+//     return arr.some(num => num > 0)
 
-    // Only change code above this line
-}
+//     // Only change code above this line
+// }
 
-checkPositive([1, 2, 3, -4, 5]);
+// checkPositive([1, 2, 3, -4, 5]);
+
+//////////////////////////////////////////////////////////////////////////
+
+// 
+// Section 23: Introduction to Currying and Partial Application
+// 
+// 
+// Fill in the body of the add function so it uses currying to add parameters x, y, and z.
+
+// function add(x) {
+//     // Only change code below this line
+//     return (y) => {
+//         return (z) => {
+//             return x + y + z
+//         }
+//     }
+
+//     // Only change code above this line
+// }
+
+// console.log(add(10)(20)(30));
 
 //////////////////////////////////////////////////////////////////////////
