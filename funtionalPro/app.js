@@ -704,16 +704,41 @@
 // Use the sort method in the alphabeticalOrder function to sort the elements of 
 // arr in alphabetical order. The function should return the sorted array.
 
-function alphabeticalOrder(arr) {
+// function alphabeticalOrder(arr) {
+//     // Only change code below this line
+//     return arr.sort((a, b) => {
+//         return a.charCodeAt(0) - b.charCodeAt(0)
+//     })
+//     // return arr
+//     // Only change code above this line
+// }
+
+// let klkA = ["a", "d", "c", "a", "z", "g"];
+// console.log(klkA)
+// console.log(alphabeticalOrder(klkA))
+// console.log(klkA)
+
+
+//////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 17: Return a Sorted Array Without Changing the Original Array
+// 
+// 
+// Use the sort method in the nonMutatingSort function to sort the elements of an
+// array in ascending order.The function should return a new array, and not mutate 
+// the globalArray variable.
+
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
     // Only change code below this line
-    return arr.sort((a, b) => {
-        return a.charCodeAt(0) - b.charCodeAt(0)
-    })
-    // return arr
+    return arr.map(num => num).sort((a, b) => (a === b ? 0 : a < b ? -1 : 1))
+
     // Only change code above this line
 }
 
-console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]))
-
-
+console.log(nonMutatingSort(globalArray));
+console.log(globalArray)
 //////////////////////////////////////////////////////////////////////////
