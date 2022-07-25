@@ -730,15 +730,45 @@
 // array in ascending order.The function should return a new array, and not mutate 
 // the globalArray variable.
 
-const globalArray = [5, 6, 3, 2, 9];
+// const globalArray = [5, 6, 3, 2, 9];
 
-function nonMutatingSort(arr) {
-    // Only change code below this line
-    return arr.map(num => num).sort((a, b) => (a === b ? 0 : a < b ? -1 : 1))
+// function nonMutatingSort(arr) {
+//     // Only change code below this line
+//     return arr.map(num => num).sort((a, b) => (a === b ? 0 : a < b ? -1 : 1))
 
-    // Only change code above this line
-}
+//     // Only change code above this line
+// }
 
-console.log(nonMutatingSort(globalArray));
-console.log(globalArray)
+// console.log(nonMutatingSort(globalArray));
+// console.log(globalArray)
+//////////////////////////////////////////////////////////////////////////
+
+// 
+// Section 18: Split a String into an Array Using the split Method
+// 
+// 
+// Use the split method inside the splitify function to split str into an array of words. 
+// The function should return the array. Note that the words are not always separated by spaces, 
+// and the array should not contain punctuation.
+
+
+//////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 18: Split a String into an Array Using the split Method
+// 
+// 
+//Use the split method inside the splitify function to split str into an array of words. 
+//The function should return the array. Note that the words are not always separated by spaces, 
+//and the array should not contain punctuation.
+
+// function splitify(str) {
+//     // Only change code below this line
+
+//     return str.split(/\s|\W/)
+//     // Only change code above this line
+// }
+
+// console.log(splitify("Hello World,I-am code"));
 //////////////////////////////////////////////////////////////////////////
