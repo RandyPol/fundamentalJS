@@ -148,12 +148,44 @@
 // 
 // Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
 
-function spinalCase(str) {
-    return str.split(/(?=[A-Z])|[\W\_]/).map(item => item.trim()).join('-').toLowerCase()
+// function spinalCase(str) {
+//     return str.split(/(?=[A-Z])|[\W\_]/).map(item => item.trim()).join('-').toLowerCase()
+// }
+
+// console.log(spinalCase('This Is Spinal Tap'));
+
+// console.log(spinalCase("thisIsSpinalTap"))
+
+////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 6: Pig Latin
+// 
+// 
+// 
+// Pig Latin is a way of altering English Words. The rules are as follows:
+
+// - If a word begins with a consonant, take the first consonant or consonant cluster, 
+// move it to the end of the word, and add ay to it.
+
+// - If a word begins with a vowel, just add way at the end.
+
+// Translate the provided string to Pig Latin. Input strings are guaranteed to be English words in all lowercase.
+
+// Translate the provided string to Pig Latin. Input strings are guaranteed to be English words in all lowercase.
+
+function translatePigLatin(str) {
+    if ('aeiouAEIOU'.includes(str[0])) {
+        return str + "way"
+    } else {
+        let searRegex = /^[bcdfghjklmnpqrstvwxyz]{1,}/i;
+        let newstr = str.replace(searRegex, '');
+        return newstr + str.slice(0, str.length - newstr.length) + "ay"
+    }
+
 }
 
-console.log(spinalCase('This Is Spinal Tap'));
-
-console.log(spinalCase("thisIsSpinalTap"))
+console.log(translatePigLatin("california"));
 
 ////////////////////////////////////////////////////////////////////////
