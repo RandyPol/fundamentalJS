@@ -116,7 +116,7 @@
 
 // function whatIsInAName(collection, source) {
 //     const souceKeys = Object.keys(source);
-  
+
 //     // filter the collection
 //     return collection.filter(obj => {
 //       for (let i = 0; i < souceKeys.length; i++) {
@@ -127,16 +127,33 @@
 //       return true;
 //     });
 //   }
-  
+
 //   function whatIsInAName(collection, source) {
 //     // "What's in a name? that which we call a rose
 //     // By any other name would smell as sweet.”
 //     // -- by William Shakespeare, Romeo and Juliet
 //     const sourceKeys = Object.keys(source);
-  
+
 //     return collection
 //       .filter(obj => sourceKeys
 //                        .every(key => obj.hasOwnProperty(key) && obj[key] === source[key]));
 //   }
+
+////////////////////////////////////////////////////////////////////////
+
+// 
+// Section 5: Spinal Tap Case
+// 
+// 
+// 
+// Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+function spinalCase(str) {
+    return str.split(/(?=[A-Z])|[\W\_]/).map(item => item.trim()).join('-').toLowerCase()
+}
+
+console.log(spinalCase('This Is Spinal Tap'));
+
+console.log(spinalCase("thisIsSpinalTap"))
 
 ////////////////////////////////////////////////////////////////////////
