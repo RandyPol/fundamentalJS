@@ -239,23 +239,41 @@
 // The character and its pair are paired up in an array, and all the arrays are grouped 
 // into one encapsulating array.
 
-function pairElement(str) {
-    let newArray = [];
-    for (let letter of str) {
-        if ("AT".includes(letter)) {
-            letter === "A" ? newArray.push(["A", "T"]) : newArray.push(["T", "A"]);
-        } else {
-            letter === "C" ? newArray.push(["C", "G"]) : newArray.push(["G", "C"]);
-        }
-    }
-    return newArray
-}
+// function pairElement(str) {
+//     let newArray = [];
+//     for (let letter of str) {
+//         if ("AT".includes(letter)) {
+//             letter === "A" ? newArray.push(["A", "T"]) : newArray.push(["T", "A"]);
+//         } else {
+//             letter === "C" ? newArray.push(["C", "G"]) : newArray.push(["G", "C"]);
+//         }
+//     }
+//     return newArray
+// }
 
-pairElement("GCG");
-console.log(pairElement("ATCGA"));
+// pairElement("GCG");
+// console.log(pairElement("ATCGA"));
 
 ////////////////////////////////////////////////////////////////////////
 
-// for the input GCG, return [["G", "C"], ["C", "G"], ["G", "C"]]
 
-// pairElement("ATCGA") should return [["A", "T"], ["T", "A"], ["C", "G"], ["G", "C"], ["A", "T"]]
+// 
+// Section 9: Missing letters
+// 
+// 
+// 
+// Find the missing letter in the passed letter range and return it.
+// If all letters are present in the range, return undefined.
+// let azKeyObt = Object.fromEntries(Object.entries(azArray).map(a => [a[1], a[0]]));
+function fearNotLetter(str) {
+    const azArray = "abcdefghijklmnopqrstuvwxyz".split("");
+
+    let arrayResult = azArray.slice(azArray.indexOf(str[0]), azArray.indexOf(str[str.length - 1]) + 1)
+        .filter(item => !str.includes(item));
+
+    return arrayResult.length ? `${arrayResult[0]}` : undefined;
+
+}
+
+console.log(fearNotLetter("abce"))
+////////////////////////////////////////////////////////////////////////
