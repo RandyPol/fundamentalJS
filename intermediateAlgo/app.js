@@ -175,17 +175,49 @@
 
 // Translate the provided string to Pig Latin. Input strings are guaranteed to be English words in all lowercase.
 
-function translatePigLatin(str) {
-    if ('aeiouAEIOU'.includes(str[0])) {
-        return str + "way"
-    } else {
-        let searRegex = /^[bcdfghjklmnpqrstvwxyz]{1,}/i;
-        let newstr = str.replace(searRegex, '');
-        return newstr + str.slice(0, str.length - newstr.length) + "ay"
-    }
+// function translatePigLatin(str) {
+//     if ('aeiouAEIOU'.includes(str[0])) {
+//         return str + "way"
+//     } else {
+//         let searRegex = /^[bcdfghjklmnpqrstvwxyz]{1,}/i;
+//         let newstr = str.replace(searRegex, '');
+//         return newstr + str.slice(0, str.length - newstr.length) + "ay"
+//     }
+
+// }
+
+// console.log(translatePigLatin("california"));
+
+////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 7: Search and Replace
+// 
+// 
+// 
+// Perform a search and replace on the sentence using the arguments provided 
+// and return the new sentence.
+
+// First argument is the sentence to perform the search and replace on.
+
+// Second argument is the word that you will be replacing (before).
+
+// Third argument is what you will be replacing the second argument with (after).
+
+// Note: Preserve the case of the first character in the original word when you are replacing it. 
+// For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+
+function myReplace(str, before, after) {
+    let newString = before[0] === before[0].toUpperCase() ?
+        after[0].toUpperCase() + after.slice(1) : after[0].toLowerCase() + after.slice(1);
+
+    return str.replace(before, newString)
 
 }
 
-console.log(translatePigLatin("california"));
+console.log(myReplace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped"));
+
+
 
 ////////////////////////////////////////////////////////////////////////
