@@ -208,16 +208,54 @@
 // Note: Preserve the case of the first character in the original word when you are replacing it. 
 // For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
 
-function myReplace(str, before, after) {
-    let newString = before[0] === before[0].toUpperCase() ?
-        after[0].toUpperCase() + after.slice(1) : after[0].toLowerCase() + after.slice(1);
+// function myReplace(str, before, after) {
+//     let newString = before[0] === before[0].toUpperCase() ?
+//         after[0].toUpperCase() + after.slice(1) : after[0].toLowerCase() + after.slice(1);
 
-    return str.replace(before, newString)
+//     return str.replace(before, newString)
 
-}
+// }
 
-console.log(myReplace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped"));
-
+// console.log(myReplace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped"));
 
 
 ////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 8: DNA Pairing
+// 
+// 
+// 
+// Pairs of DNA strands consist of nucleobase pairs. Base pairs are represented by 
+// the characters AT and CG, which form building blocks of the DNA double helix.
+
+// The DNA strand is missing the pairing element. Write a function to match the missing 
+// base pairs for the provided DNA strand. For each character in the provided string, 
+// find the base pair character. Return the results as a 2d array.
+
+// For example, for the input GCG, return [["G", "C"], ["C","G"], ["G", "C"]]
+
+// The character and its pair are paired up in an array, and all the arrays are grouped 
+// into one encapsulating array.
+
+function pairElement(str) {
+    let newArray = [];
+    for (let letter of str) {
+        if ("AT".includes(letter)) {
+            letter === "A" ? newArray.push(["A", "T"]) : newArray.push(["T", "A"]);
+        } else {
+            letter === "C" ? newArray.push(["C", "G"]) : newArray.push(["G", "C"]);
+        }
+    }
+    return newArray
+}
+
+pairElement("GCG");
+console.log(pairElement("ATCGA"));
+
+////////////////////////////////////////////////////////////////////////
+
+// for the input GCG, return [["G", "C"], ["C", "G"], ["G", "C"]]
+
+// pairElement("ATCGA") should return [["A", "T"], ["T", "A"], ["C", "G"], ["G", "C"], ["A", "T"]]
