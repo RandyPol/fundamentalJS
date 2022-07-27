@@ -265,15 +265,40 @@
 // Find the missing letter in the passed letter range and return it.
 // If all letters are present in the range, return undefined.
 // let azKeyObt = Object.fromEntries(Object.entries(azArray).map(a => [a[1], a[0]]));
-function fearNotLetter(str) {
-    const azArray = "abcdefghijklmnopqrstuvwxyz".split("");
+// function fearNotLetter(str) {
+//     const azArray = "abcdefghijklmnopqrstuvwxyz".split("");
 
-    let arrayResult = azArray.slice(azArray.indexOf(str[0]), azArray.indexOf(str[str.length - 1]) + 1)
-        .filter(item => !str.includes(item));
+//     let arrayResult = azArray.slice(azArray.indexOf(str[0]), azArray.indexOf(str[str.length - 1]) + 1)
+//         .filter(item => !str.includes(item));
 
-    return arrayResult.length ? `${arrayResult[0]}` : undefined;
+//     return arrayResult.length ? `${arrayResult[0]}` : undefined;
 
+// }
+
+// console.log(fearNotLetter("abce"))
+////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 10: Sorted Union
+// 
+// 
+// 
+// Write a function that takes two or more arrays and returns a new array 
+// of unique values in the order of the original provided arrays.
+
+// In other words, all values present from all arrays should be included 
+// in their original order, but with no duplicates in the final array.
+
+// The unique numbers should be sorted by their original order, but the final 
+// array should not be sorted in numerical order.
+
+// Check the assertion tests for examples.
+
+function uniteUnique(arr) {
+    const args = Array.prototype.slice.call(arguments);
+    return [...new Set(args[0].concat(...args.slice(1)))]
 }
 
-console.log(fearNotLetter("abce"))
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
 ////////////////////////////////////////////////////////////////////////
