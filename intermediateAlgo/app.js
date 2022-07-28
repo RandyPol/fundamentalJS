@@ -438,3 +438,42 @@
 // console.log(sumPrimes(977))
 ////////////////////////////////////////////////////////////////////////
 
+// 
+// Section 14: Smallest Common Multiple
+// 
+// 
+// 
+// Find the smallest common multiple of the provided parameters that can be evenly divided 
+// by both, as well as by all sequential numbers in the range between these parameters.
+
+// The range will be an array of two numbers that will not necessarily be in numerical order.
+
+// For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also 
+// evenly divisible by all numbers between 1 and 3. The answer here would be 6.
+
+// function smallestCommons(arr) {
+//     let [one, two] = arr[0] < arr[1] ? arr : [arr[1], arr[0]];
+//     const rangeList = [...Array(two - one + 1).keys()].map(x => x + one);
+//     return smallComMult(one, two, rangeList)
+// }
+
+// function smallComMult(num1, num2, arrayList) {
+//     let currentNum = num1;
+//     let found = false;
+//     while (!found) {
+//         if (currentNum % num1 === currentNum % num2) {
+//             if (arrayList.every(x => currentNum % x === 0)) {
+//                 return currentNum
+//             }
+//         }
+//         currentNum += 1;
+//     }
+
+// }
+
+// console.log(smallestCommons([23, 18]))
+
+
+
+////////////////////////////////////////////////////////////////////////
+
