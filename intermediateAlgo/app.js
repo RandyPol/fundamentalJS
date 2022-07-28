@@ -295,10 +295,52 @@
 
 // Check the assertion tests for examples.
 
-function uniteUnique(arr) {
-    const args = Array.prototype.slice.call(arguments);
-    return [...new Set(args[0].concat(...args.slice(1)))]
-}
+// function uniteUnique(arr) {
+//     const args = Array.prototype.slice.call(arguments);
+//     return [...new Set(args[0].concat(...args.slice(1)))]
+// }
 
-console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+// console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 11: Convert HTML Entities
+// 
+// 
+// 
+// Convert the characters &, <, >, " (double quote), and ' (apostrophe), 
+// in a string to their corresponding HTML entities.
+
+
+// let htmlList = {
+//     "&": "&amp;",
+//     "<": "&lt;",
+//     ">": "&gt;",
+//     '"': "&quot;",
+//     "'": "&apos;",
+// }
+// function convertHTML(str) {
+//     return str.replace(/[&<>"']/g, match => htmlList[match])
+// }
+
+// // function convertHTML(str) {
+// //     return str.split(" ").map(item => {
+// //         if (item in htmlList) {
+// //             return htmlList[item]
+// //         } else {
+// //             if (item.split("").some(i => i in htmlList)) {
+// //                 return item.split('').map(item2 => {
+// //                     return item2 in htmlList ? htmlList[item2] : item2;
+// //                 }).join("")
+// //             }
+// //             return item
+// //         }
+// //     }).join(" ")
+// // }
+
+// console.log(convertHTML('>>&&'))
+// console.log(convertHTML("Dolce & Gabbana"))
+// console.log(convertHTML("Hamburgers < Pizza < Tacos"))
+
 ////////////////////////////////////////////////////////////////////////
