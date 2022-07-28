@@ -344,3 +344,55 @@
 // console.log(convertHTML("Hamburgers < Pizza < Tacos"))
 
 ////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 12: Sum All Odd Fibonacci Numbers
+// 
+// 
+// 
+// Given a positive integer num, return the sum of all odd Fibonacci numbers 
+// that are less than or equal to num.
+
+// The first two numbers in the Fibonacci sequence are 1 and 1. Every additional 
+// number in the sequence is the sum of the two previous numbers. The first six numbers 
+// of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8.
+
+// For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less 
+// than or equal to 10 are 1, 1, 3, and 5.
+
+
+// const sumFibs = n => {
+//     let fibArray = [0, 1];
+//     let sumofArray;
+//     let a = 0;
+//     let b = 1;
+//     let nextNum;
+//     do {
+//         nextNum = a + b;
+
+//         nextNum % 2 === 0 ? "" : nextNum <= n ? fibArray.push(nextNum) : '';
+
+//         a = b;
+//         b = nextNum;
+//         sumofArray = fibArray.reduce((prev, current) => prev + current, 0)
+//         // console.log(fibArray)
+
+//     } while (nextNum <= n);
+
+//     return sumofArray
+// }
+
+
+
+// console.log(fibonacci(10))
+// console.log(fibonacci(1000))
+// console.log(fibonacci(4000000))
+// console.log(fibonacci(4))
+// console.log(fibonacci(75024))
+// console.log(fibonacci(75025))
+// console.log(fibonacci(1))
+
+
+
+////////////////////////////////////////////////////////////////////////
