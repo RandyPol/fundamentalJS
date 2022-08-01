@@ -552,11 +552,45 @@
 
 // Remember, you can access object properties through either dot notation or [] notation.
 
-function truthCheck(collection, pre) {
-    return collection.every(obt => obt[pre])
+// function truthCheck(collection, pre) {
+//     return collection.every(obt => obt[pre])
+// }
+
+// console.log(truthCheck([{ name: "Quincy", role: "Founder", isBot: true }, { name: "Naomi", role: "", isBot: true }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot"));
+
+////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 19: Arguments Optional
+// 
+// 
+// 
+// Create a function that sums two arguments together. If only one argument is provided, 
+// then return a function that expects one argument and returns the sum.
+
+// For example, addTogether(2, 3) should return 5, and addTogether(2) should return a function.
+
+// Calling this returned function with a single argument will then return the sum:
+
+
+function addTogether(a, b) {
+    if (arguments.length === 1 && typeof a === 'number') {
+        return function (x) {
+            if (typeof x !== 'number') {
+                return undefined
+            } else {
+                return x + a
+            }
+        }
+    } else if (typeof a === 'number' && typeof b === 'number') {
+        return a + b
+    } else {
+        return undefined
+    }
 }
 
-console.log(truthCheck([{ name: "Quincy", role: "Founder", isBot: true }, { name: "Naomi", role: "", isBot: true }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot"));
+console.log(addTogether(2)(2))
 
 ////////////////////////////////////////////////////////////////////////
 
