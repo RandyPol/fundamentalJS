@@ -476,8 +476,6 @@
 ////////////////////////////////////////////////////////////////////////
 
 
-
-
 // 
 // Section 15: Drop it
 // 
@@ -504,3 +502,24 @@
 // dropElements([1, 2, 3], function (n) { return n < 3; });
 
 ////////////////////////////////////////////////////////////////////////
+
+
+// 
+// Section 16: Steamroller
+// 
+// 
+// 
+// Flatten a nested array. You must account for varying levels of nesting.
+
+// function steamrollArray(arr) {
+//     return true ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? steamrollArray(val) : val), []) : arr.slice();
+// }
+
+// console.log(steamrollArray([1, [2], [3, [[4]]]]));
+////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
